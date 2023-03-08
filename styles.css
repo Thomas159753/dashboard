@@ -4,6 +4,7 @@
     border: 0;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -13,7 +14,6 @@
 }
 /* sidebar*/
 .dashboard{
-    font-family: 'Roboto', sans-serif;
     padding-bottom: 20px;
 }
 
@@ -24,13 +24,12 @@
     font-size: 30px;
     grid-column: 1 / 1;
     grid-row: 1 / 3;
-    padding-top: 15px;
-    padding-left: 15px;
+    padding-top: 1em;
+    padding-left: 1em;
 }
 
 .sidebar ul li{
     list-style-type: NONE;
-    font-family: 'Roboto', sans-serif;
     padding-top: 15px;
 
 }
@@ -80,6 +79,7 @@
 
 .user_name{
     font-size: 25px;
+    font-weight: bold;
 }
 
 .user {
@@ -108,6 +108,7 @@
 
 .greeting{
     font-size: 20px;
+    font-weight: bold;
 }
 
 .buttons{
@@ -135,4 +136,21 @@
 
 .content{
     background-color: #e5e5e5;
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+}
+
+.Projects{
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+}
+
+.Projects > p{
+grid-column: 1 / 3;
+
+}
+
+.announcement{
+display: grid;
 }
