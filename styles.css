@@ -13,8 +13,9 @@
     grid-template-rows: 1fr 6fr;
 }
 /* sidebar*/
-.dashboard{
-    padding-bottom: 20px;
+
+.sidebar ul{
+    padding-top: 20px;
 }
 
 .sidebar{
@@ -38,12 +39,6 @@
     color: white;
     font-size: 30px;
 }
-
-.settings{
-    padding-top: 20px;
-    padding-bottom: 30px;
-
-}
 /* header*/
 
 .header{
@@ -51,8 +46,10 @@
     grid-column: 2 / 2;
     grid-row: 1 / 1;
     margin-top: 25px;
+    box-shadow: 0px 10px 8px rgba(91, 101, 114, 0.2);
+    position: relative;
 }
-#search_icon{
+.search span{
     font-size: 48px;
 }
 .search{
@@ -63,7 +60,7 @@
     padding-left: 5rem;
 }
 
-.search_bar{
+.search input{
     border-style: solid;
     border: none;
     background-color: #e5e5e5;
@@ -72,7 +69,7 @@
     height: 35px;
 }
 
-#account_circle, #notifications_icon{
+.user span{
     font-size: 48px;
     padding-right: 2rem;
 }
@@ -111,7 +108,7 @@
     font-weight: bold;
 }
 
-.buttons{
+.userButtons button{
     background-color: #3730a3;
     width: 80px;
     height: 40px;
@@ -135,22 +132,62 @@
 /* content */
 
 .content{
-    background-color: #e5e5e5;
+    background-color: #e2e8f0;
     display: grid;
     grid-template-columns: 3fr 1fr ;
 }
 
-.Projects{
-    background-color: white;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
+.content > div:first-of-type{
+    padding-top: 2em;
+    padding-left: 1em;
 }
 
-.Projects > p{
-grid-column: 1 / 3;
+.content_headers{
+    font-size: 20px;
 
+}
+.Projects{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 40em));
+    gap: 1rem;
+}
+
+.Project_div{
+    background-color: white;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(148, 163, 184, 0.3);
+    display: grid;
+}
+
+.Project_div > div:first-of-type{
+    padding: 2em;
+}
+
+.projectHighlight{
+    background-color: #fbbf24;
+    width: 200px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.content_buttons{
+    display: flex;
+    justify-content: flex-end;   
+    padding-bottom: 2em;
+    padding-right: 2em;
+}
+
+.content_buttons span{
+    font-size: 35px;
+    padding-right: 2rem;
 }
 
 .announcement{
 display: grid;
+}
+
+.content_headers{
+    font-size: 30px;
+    padding-bottom: 1rem;
 }
