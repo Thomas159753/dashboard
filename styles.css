@@ -9,8 +9,8 @@
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr 5fr;
 }
 /* sidebar*/
 
@@ -38,6 +38,7 @@
 .material-icons{
     color: white;
     font-size: 30px;
+    padding-right: .5em;
 }
 /* header*/
 
@@ -135,40 +136,43 @@
     background-color: #e2e8f0;
     display: grid;
     grid-template-columns: 3fr 1fr ;
+    grid-template-rows: 1fr 1fr;
 }
 
 .content > div:first-of-type{
-    padding-top: 2em;
-    padding-left: 1em;
+    padding-left: 4em;
+    grid-row: 1 / 3;
 }
 
 .content_headers{
     font-size: 20px;
-
+    padding-top: 1em;
 }
 .Projects{
     display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 40em));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4rem;
 }
 
 .Project_div{
-    background-color: white;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    box-shadow: 5px 5px 5px rgba(148, 163, 184, 0.3);
     display: grid;
+    grid-template-columns: 12px 1fr;
+    grid-template-rows: 3fr 1fr;
+    height: 300px;
 }
 
-.Project_div > div:first-of-type{
+.Project_div > div:nth-of-type(2n){
     padding: 2em;
+    background-color: white;
+    border-top-right-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(148, 163, 184, 0.5);
 }
 
 .projectHighlight{
     background-color: #fbbf24;
-    width: 200px;
-    grid-column: 1 / 2;
     grid-row: 1 / 3;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 .content_buttons{
@@ -176,6 +180,9 @@
     justify-content: flex-end;   
     padding-bottom: 2em;
     padding-right: 2em;
+    background-color: white;
+    border-bottom-right-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(148, 163, 184, 0.5);
 }
 
 .content_buttons span{
@@ -183,11 +190,27 @@
     padding-right: 2rem;
 }
 
-.announcement{
+.content_text{
+    color: #71717a;
+}
+
+.content_title{
+    font-size: 25px;
+}
+
+/* announcement */
+
+.announcement div:first-of-type{
 display: grid;
 }
 
 .content_headers{
     font-size: 30px;
     padding-bottom: 1rem;
+}
+
+.Trendind{
+    display: grid;
+    grid-column: 2;
+    grid-row: 2 / 2;
 }
